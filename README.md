@@ -40,7 +40,7 @@ setTimeout(() => {
 }, 5000);
 ```
 
-## Playing sprite 
+## Playing Sprite 
 ```js
 const ternBlaster = new TernBlaster();
 ternBlaster.playOnPos('test', { x: 0, y: 0, z: 0 , distance:5});
