@@ -1,0 +1,42 @@
+{
+  "name": "tern-blaster",
+  "version": "1.0.0",
+  "description": "Tern blaster",
+  "main": "./src/index.ts",
+  "scripts": {
+    "test": "echo \"All test have passed\" && exit 1",
+    "build": "webpack --mode=production --node-env=production",
+    "build:dev": "webpack --mode=development",
+    "build:prod": "webpack --mode=production --node-env=production",
+    "dev": "webpack serve"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/howler": "^2.2.4",
+    "@types/lodash": "^4.14.176",
+    "@typescript-eslint/eslint-plugin": "^5.2.0",
+    "@typescript-eslint/parser": "^5.2.0",
+    "@webpack-cli/generators": "^2.4.1",
+    "eslint": "^8.1.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.1.1",
+    "html-webpack-plugin": "^5.5.0",
+    "prettier": "^2.4.1",
+    "ts-loader": "^9.2.6",
+    "typescript": "^4.4.4",
+    "webpack": "^5.60.0",
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.3.1"
+  },
+  "dependencies": {
+    "@tonejs/piano": "^0.2.1",
+    "howler": "^2.2.3",
+    "lodash": "^4.17.21",
+    "tone": "^14.7.77",
+    "webmidi": "^2.5.3"
+  }
+}
