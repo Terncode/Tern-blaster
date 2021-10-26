@@ -33,7 +33,7 @@ setTimeout(() => {
 ```
 
 
-## Playing Synth
+## Playing synth
 ```js
 const ternBlaster = new TernBlaster();
 
@@ -43,7 +43,7 @@ setTimeout(() => {
 }, 5000);
 ```
 
-## Playing Sprite 
+## Playing sprite 
 ```js
 const ternBlaster = new TernBlaster();
 ternBlaster.playOnPos('test', { x: 0, y: 0, z: 0 , distance:5});
