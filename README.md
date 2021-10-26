@@ -1,6 +1,9 @@
-# Tern blaster
+# Tern blaster the sophisticated audio engine 
 
-Tern blaster is an audio engine provide 3 dimensional audio. You have to prebuild sprites to wok. It comes with 2 dimensional Synth and Piano sampler.  
+Tern blaster is sophisticated audio engine that comes with 3 dimensional audio system and 2 dimensional Synth, piano sampler and custom piano sample which allows you to add custom piano soudns.   
+
+### Sprite player
+The project doesn't currently have any audio builder therefor you have to build it manullay! You can use lib https://www.npmjs.com/package/audiosprite that can do most of the heavy lifting for you.
 
 Running in development
 ```
