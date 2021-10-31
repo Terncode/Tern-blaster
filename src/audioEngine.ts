@@ -1,7 +1,7 @@
 import { AudioPoint, Point } from './interfaces';
 import { SpritePlayer } from './spritePlayer';
 import { SynthEngine } from './synthEngine';
-import { SettingsUpdateable, VolumeHandler } from './volumeHandler';
+import { SettingsUpdateable as SettingsUpdatable, VolumeHandler } from './volumeHandler';
 import { PianoHandler } from './piano/pianoHandler';
 import { HowlOptions } from 'howler';
 
@@ -28,7 +28,7 @@ type UpdateType = UpdateTypeTimeout | UpdateTypeAnimationFrame | UpdateTypeCusto
 export interface TernBlasterOptions {
     updateOptions?: UpdateType,
     spritePlayerOptions?: SpritePlayerOptions
-    settings?: SettingsUpdateable;
+    settings?: SettingsUpdatable;
 }
 
 export class TernBlaster {
