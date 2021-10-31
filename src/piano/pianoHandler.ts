@@ -2,7 +2,7 @@ import { pushUniq } from '../utils';
 import { CustomPianoSampler, PedalState } from './customPianoSampler';
 import { IPianoSampler} from './IPianoSampler';
 import { PianoSampler } from './pianoSampler';
-import { Note } from '../midiConstants';
+import { Note } from '../interfaces';
 
 export class PianoHandler {
     private defaultPiano = new PianoSampler();
