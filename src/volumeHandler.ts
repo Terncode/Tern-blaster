@@ -1,30 +1,15 @@
 
 import { TernBlaster } from './audioEngine';
-
-export interface AudioSettings {
-    master: number,
-    ambient: number,
-    music: number,
-    sprite: number,
-    piano: number,
-    synth: number,
-}
-
-export interface SettingsUpdateable {
-    settings: AudioSettings;
-    onUpdate: () => void;
-}
+import { SettingsUpdatable } from './interfaces';
 
 export class VolumeHandler {
 
-    constructor(private audioEngine: TernBlaster, private settings: SettingsUpdateable) {
+    constructor(private audioEngine: TernBlaster, private settings: SettingsUpdatable) {
         if (!settings) {
             const storageKey = 'tern_blaster';
             this.settings = {
                 settings: {
                     master: 100,
-                    ambient: 75,
-                    music: 50,
                     sprite: 50,
                     piano: 75,
                     synth: 10,

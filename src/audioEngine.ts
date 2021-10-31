@@ -1,7 +1,7 @@
-import { AudioPoint, Point } from './interfaces';
+import { AudioPoint, Point, SettingsUpdatable } from './interfaces';
 import { SpritePlayer } from './spritePlayer';
 import { SynthEngine } from './synthEngine';
-import { SettingsUpdateable as SettingsUpdatable, VolumeHandler } from './volumeHandler';
+import { VolumeHandler } from './volumeHandler';
 import { PianoHandler } from './piano/pianoHandler';
 import { HowlOptions } from 'howler';
 

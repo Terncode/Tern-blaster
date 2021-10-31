@@ -1,4 +1,5 @@
-import { MidiObject, MIDI_MAP } from './midiConstants';
+import { MidiObject } from './interfaces';
+import { MIDI_MAP } from './midiConstants';
 import { pushUniq, removeItem } from './utils';
 
 export type SynthEngineOscillator = 'sawtooth' | 'sine' | 'square' | 'triangle';
