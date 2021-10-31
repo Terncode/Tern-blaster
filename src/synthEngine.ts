@@ -1,7 +1,7 @@
 import { MidiObject, MIDI_MAP } from './midiConstants';
 import { pushUniq, removeItem } from './utils';
 
-type Oscillator = 'sawtooth' | 'sine' | 'square' | 'triangle';
+export type SynthEngineOscillator = 'sawtooth' | 'sine' | 'square' | 'triangle';
 interface GainedOscillator {
     oscillator: OscillatorNode;
     gain: GainNode;
@@ -26,7 +26,7 @@ export class SynthEngine {
         }
     }
 
-    private createGainOscillator(type: Oscillator, frequency: number): GainedOscillator {
+    private createGainOscillator(type: SynthEngineOscillator, frequency: number): GainedOscillator {
 	    const gain = this.audioContext.createGain();
         gain.gain.value = this.volume / 100;
 	    gain.connect(this.audioContext.destination);
@@ -48,19 +48,19 @@ export class SynthEngine {
     get playingNotes(){
         return this._playingNotes;
     }
-    keyDown(type: Oscillator, note: string) {
+    keyDown(type: SynthEngineOscillator, note: string) {
         const midiKey = this.map.get(note);
         if (midiKey) {
             this.toggleNote(type, midiKey, true);
         }
     }
-    keyUp(type:Oscillator, note: string) {
+    keyUp(type:SynthEngineOscillator, note: string) {
         const midiKey = this.map.get(note);
         if (midiKey) {
             this.toggleNote(type, midiKey, false);
         }
     }
-    playTone(type: Oscillator, frequency: number, duration: number) {
+    playTone(type: SynthEngineOscillator, frequency: number, duration: number) {
 	    const osc = this.createGainOscillator(type, frequency);
 
 	    pushUniq(this.oscillatorNodes, osc);
@@ -69,7 +69,7 @@ export class SynthEngine {
 	        removeItem(this.oscillatorNodes, osc);
 	    }, duration);
     }
-    toggleNote(type: Oscillator, midiValue: number, value: boolean) {
+    toggleNote(type: SynthEngineOscillator, midiValue: number, value: boolean) {
 	    const midi = MIDI_MAP[midiValue];
 	    if (!midi) {
 	        this.debug && console.error(`None existent midi value ${midiValue}`);
