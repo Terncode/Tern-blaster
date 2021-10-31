@@ -12,7 +12,7 @@ export class VolumeHandler {
                     master: 100,
                     sprite: 50,
                     piano: 75,
-                    synth: 10,
+                    synth: 5,
                 },
                 onUpdate: () => {
                     localStorage.setItem(storageKey, JSON.stringify(this.settings.settings));
